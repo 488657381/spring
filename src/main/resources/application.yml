@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver # 如果需要明确指定的话
+    url: jdbc:mysql://localhost:3306/tb_user # 假设数据库在本地运行
+    username: root
+    password: root
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.example.spring.domain
+  configuration:
+    map-underscore-to-camel-case: true
